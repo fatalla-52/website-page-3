@@ -1,243 +1,353 @@
- margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #000;
-    color: #000; 
+    background-color: #c7c1a5; /* Beige background from your design */
+    font-family: Arial, sans-serif;
+    color: #000; /* Default text color */
 }
 
-.section {
-    background-color: #e0ddd0; 
-    margin: 1rem auto;
-    padding: 1.5rem;
-    max-width: 900px;
-    position: relative;
-}
-
-.menu-icon {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 25px;
-    height: 20px;
+/* Navigation Bar */
+nav {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-icon span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #000;
-}
-
-.header-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.header-content h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.header-content p {
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-.header-img img {
-    width: 100%;
-    max-width: 150px;
-    display: block;
-    margin: 0 auto;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.cta-btn {
-    padding: 0.6rem 1.2rem;
-    border: 2px solid #000;
-    border-radius: 4px;
+    justify-content: flex-end;
+    gap: 25px;
+    padding: 15px 30px;
     font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
 }
 
-.join-btn {
-    background-color: #ff0000; 
+nav a {
+    text-decoration: none;
+    color: #000;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+
+/* ==============================================
+   HOME PAGE STYLES
+============================================== */
+.section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.text {
+    width: 60%;
+}
+
+.text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.text h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text ul {
+    margin-left: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.section img {
+    width: 35%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.join {
+    background-color: #ff0000; /* Red button */
 }
 
 .contact-btn {
-    background-color: #228b22;
+    background-color: #228b22; /* Green button */
 }
 
-/* LEARN PAGE SECTIONS */
+
+/* ==============================================
+   LEARN PAGE STYLES
+============================================== */
+.learn-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.learn-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 /* Customer Interaction Section */
-.interaction-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    align-items: start;
+.interaction-block {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-.interaction-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.interaction-text {
+    width: 60%;
+}
+
+.interaction-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .interaction-text p,
 .interaction-text ul {
-    font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 .interaction-text ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
+    margin-left: 20px;
 }
 
-.interaction-img img {
-    width: 100%;
-    height: auto;
-    display: block;
+.interaction-block img {
+    width: 35%;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.equipment-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
+/* Equipment & Ingredients Grid */
 .equipment-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .item-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .item-card img {
-    width: 100%;
-    max-width: 120px;
-    margin-bottom: 0.5rem;
+    width: 80%;
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.item-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .item-card ul {
-    list-style-type: none;
-    font-size: 0.9rem;
-    line-height: 1.3;
+    list-style: none;
+    line-height: 1.5;
 }
 
-.contact-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
+
+/* ==============================================
+   CONTACT PAGE STYLES
+============================================== */
+.contact-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+.contact-info {
+    width: 50%;
+    line-height: 1.8;
 }
 
-.contact-info p {
-    margin: 1rem 0;
-    font-size: 1rem;
+.contact-info h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .contact-info span {
     font-weight: bold;
-    color: #8b4513; 
+    color: #5a3e2b; /* Warm brown for labels */
+}
+
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .contact-form label {
-    display: block;
-    margin-bottom: 0.5rem;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 2px solid #000;
-    border-radius: 4px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
     background-color: #fff;
-    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .contact-form textarea {
+    min-height: 120px;
     resize: vertical;
-    min-height: 80px;
 }
 
 .send-btn {
-    background-color: #87ceeb; 
-    border: 2px solid #000;
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
+    padding: 12px 25px;
+    border-radius: 6px;
     font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-    display: block;
-}
-
-
-nav {
-    background-color: #000;
-    padding: 1rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
     color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #4682b4; /* Light blue button */
+    transition: opacity 0.3s ease;
+    align-self: flex-start;
 }
 
+.send-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* ==============================================
+   MOBILE RESPONSIVE STYLES (ALL PAGES)
+============================================== */
 @media (max-width: 768px) {
-    .header-content,
-    .interaction-section,
-    .equipment-grid,
-    .contact-grid {
+    /* Navigation */
+    nav {
+        justify-content: center;
+        gap: 15px;
+        font-size: 15px;
+        padding: 15px 10px;
+    }
+
+    /* Home Page */
+    .section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .section img {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    .text h3 {
+        font-size: 18px;
+    }
+
+    .btn {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* Learn Page */
+    .learn-section {
+        padding: 30px 15px;
+    }
+
+    .learn-section h2 {
+        font-size: 24px;
+    }
+
+    .interaction-block {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .interaction-text {
+        width: 100%;
+    }
+
+    .interaction-block img {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .equipment-grid {
         grid-template-columns: 1fr;
     }
 
-    .menu-icon {
-        top: 1rem;
-        right: 1rem;
+    /* Contact Page */
+    .contact-section {
+        flex-direction: column;
+        padding: 30px 15px;
     }
 
-    .cta-buttons {
-        flex-direction: column;
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-info h1 {
+        font-size: 28px;
         text-align: center;
     }
 
-    .cta-btn {
-        display: block;
+    .send-btn {
+        align-self: stretch;
+        text-align: center;
     }
 }
+Write to Angie Fatalla
