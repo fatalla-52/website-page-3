@@ -70,7 +70,7 @@ nav a:hover {
 
 
 .box ul, .box p {
-    font-size: 18px; /* Bigger text */
+    font-size: 18px;
     line-height: 1.8;
     margin-top: 15px;
 }
@@ -87,9 +87,9 @@ nav a:hover {
     margin: 0 auto;
     padding: 40px 20px;
     display: flex;
-    flex-direction: column; /* Stack elements on small screens */
+    flex-direction: column; 
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .text {
@@ -113,7 +113,7 @@ nav a:hover {
 }
 
 .section img {
-    max-width: 300px; /* Cap image width */
+    max-width: 300px; 
     border-radius: 8px;
 }
 
